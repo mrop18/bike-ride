@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flying bird</title>
+</head>
+<body>
+    <style>
+        .bird-block{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bird{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .bird-body{
+            width: 30%;
+            height: 30%;
+            background-image: url(./bird-body.png);
+            background-size: cover;
+            position: absolute;
+            
+        }
+        .bird-wings{
+            width: 50%;
+            height: 15%;
+            background-image: url(./bird-wings.png);
+            background-size: cover;
+            position: relative;
+            top: 2%;
+            transform-origin: top;
+            animation: wing .6s linear infinite;
+        }
+        @keyframes wing{
+            50%{
+                transform: rotatex(-360deg);
+            }
+        }
+    </style>
+    <div class="bird-block">
+        <div class="bird">
+            <div class="bird-body"></div>
+            <div class="bird-wings"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
